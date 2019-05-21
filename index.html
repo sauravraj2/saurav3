@@ -1,0 +1,309 @@
+<html>
+<head>
+	<script type="text/javascript">
+		function raj()
+		{ 
+			var b=[];
+			b[0]=document.getElementById("sau1").value;
+			b[1]=document.getElementById("sau2").value;
+			b[2]=document.getElementById("sau3").value;
+			document.getElementById("sau4").innerHTML=(18*b[1]+6.25*b[2]-5*b[0]+5)+"KCAL";
+			alert("TOTAL IDEAL CALORIES MUST BE "+(18*b[1]+6.25*b[2]-5*b[0]+5)+" KCAL");
+		}
+		function raj1()
+		{
+			var b=[];
+			b[0]=document.getElementById("sau1").value;
+			b[1]=document.getElementById("sau2").value;
+			b[2]=document.getElementById("sau3").value;
+			var w=(18*b[1]+6.25*b[2]-5*b[0]+5);
+			var c=[];
+			c[0]=document.getElementById("z1").value;
+			c[1]=document.getElementById("z2").value;
+			c[2]=document.getElementById("z3").value;
+			c[3]=document.getElementById("z4").value;
+			c[4]=document.getElementById("z5").value;
+			c[5]=document.getElementById("z6").value;
+			c[6]=document.getElementById("z7").value;
+			c[7]=document.getElementById("z8").value;
+			c[8]=document.getElementById("z9").value;
+			var d=[];
+			d[0]=document.getElementById("p1").value;
+			d[1]=document.getElementById("p2").value;
+			d[2]=document.getElementById("p3").value;
+			d[3]=document.getElementById("p4").value;
+			d[4]=document.getElementById("p5").value;
+			d[5]=document.getElementById("p6").value;
+			d[6]=document.getElementById("p7").value;
+			d[7]=document.getElementById("p8").value;
+			d[8]=document.getElementById("p9").value;
+			e=document.getElementsByClassName("q");
+			f=document.getElementsByClassName("r");
+			g=document.getElementsByClassName("s");
+			h=document.getElementsByClassName("t");
+			var sum=0;
+			var array=[];
+			for(var i=0;i<9;i++)
+			{ 
+				if(c[i]=="pancake")
+				{
+					e[i].innerHTML=42*d[i]+"gm";
+					f[i].innerHTML=16*d[i]+"gm";
+					g[i].innerHTML=2*d[i]+"gm";
+					h[i].innerHTML=150*d[i];
+					array[i]=150*d[i];
+				}
+				if(c[i]=="shake")
+				{
+					e[i].innerHTML=26*d[i]+"gm";
+					f[i].innerHTML=12*d[i]+"gm";
+					g[i].innerHTML=4*d[i]+"gm";
+					h[i].innerHTML=140*d[i];
+					array[i]=140*d[i];
+				}
+				if(c[i]=="egg roll")
+				{
+					e[i].innerHTML=13*d[i]+"gm";
+					f[i].innerHTML=3*d[i]+"gm";
+					g[i].innerHTML=7*d[i]+"gm";
+					h[i].innerHTML=150*d[i];
+					array[i]=150*d[i];
+				}
+				if(c[i]=="sandwich")
+				{
+					e[i].innerHTML=42*d[i]+"gm";
+					f[i].innerHTML=22*d[i]+"gm";
+					g[i].innerHTML=2*d[i]+"gm";
+					h[i].innerHTML=50*d[i];
+					array[i]=50*d[i];
+				}
+				if(c[i]=="coke")
+				{
+					e[i].innerHTML=50*d[i]+"gm";
+					f[i].innerHTML=30*d[i]+"gm";
+					g[i].innerHTML=0*d[i]+"gm";
+					h[i].innerHTML=250*d[i];
+					array[i]=250*d[i];
+				}
+				if(c[i]=="poached egg")
+				{
+					e[i].innerHTML=18*d[i]+"gm";
+					f[i].innerHTML=20*d[i]+"gm";
+					g[i].innerHTML=8*d[i]+"gm";
+					h[i].innerHTML=200*d[i];
+					array[i]=200*d[i];
+				}
+				if(c[i]=="pizza")
+				{
+					e[i].innerHTML=16*d[i]+"gm";
+					f[i].innerHTML=14*d[i]+"gm";
+					g[i].innerHTML=3*d[i]+"gm";
+					h[i].innerHTML=100*d[i];
+					array[i]=100*d[i];
+				}
+				sum+=array[i];
+				if(sum>w)
+				{
+				alert("you exceed your limit "+w+"kcal");
+				document.getElementById("delta").innerHTML=(sum)+"kcal"
+				}
+			}
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="b.css">
+</head>
+<body>
+	<div class="a">
+		<p><b><marquee>CALORIES COUNTER!!!</marquee></b></p>
+		<b>AGE:<input id="sau1">yr</b><br>
+		<b>WEIGHT:<input id="sau2">kg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></br>
+		<b>HEIGHT:<input id="sau3">cm&nbsp;&nbsp;&nbsp;</b><br><br>
+		<button onclick="raj();"><b>proceed</b></button><br>
+		<pre><h2><b>IDEAL TARGET CALORIES!!!<b></h2></pre>
+   		<b class=x id="sau4"></b>
+	</div>
+	<div class="b">
+		<p><b><marquee>CALORIES COUNTER!!!</marquee></b></p>
+		<table class="c" width="100%" height="20%" border=2>
+			<tr class="d">
+				<td width="40%"><b>BREAKFAST</b></td>
+				<td><b>QUANTITY</b></td>
+				<td><b>FAT</b></td>
+				<td><b>CARBS</b></td>
+				<td><b>PROTEIN<b></td>
+				<td><b>CALORIES(kcl)</b></td>
+				<tr>
+				<td>1.<input list="my" id="z1" class="z" placeholder="+add food"></td>
+				<datalist id="my">
+				<option value="pancake">
+				<option value="shake">
+				<option value="egg roll">
+				<option value="sandwich">
+				<option value="coke">
+				<option value="poached egg">
+				<option value="pizza">
+				<td><input id="p1" type="number"></td>
+				<td class="q"></td>
+				<td class="r"></td>
+				<td class="s"></td>
+				<td class="t"></td>
+				</tr>
+				<tr>
+				<td>2.<input list="my" id="z2" class="z" placeholder="+add food"></td>
+				<datalist id="my">
+				<option value="pancake">
+				<option value="shake">
+				<option value="egg roll">
+				<option value="sandwich">
+				<option value="coke">
+				<option value="poached egg">
+				<option value="pizza">
+				<td ><input id="p2" type="number"></td>
+				<td class="q"></td>
+				<td class="r"></td>
+				<td class="s"></td>
+				<td class="t"></td>
+				</tr>
+				<tr>
+				<td>3.<input list="my" id="z3" class="z" placeholder="+add food"></td>
+				<datalist id="my">
+				<option value="pancake">
+				<option value="shake">
+				<option value="egg roll">
+				<option value="sandwich">
+				<option value="coke">
+				<option value="poached egg">
+				<option value="pizza">
+				<td><input id="p3" type="number"></td>
+				<td class="q"></td>
+				<td class="r"></td>
+				<td class="s"></td>
+				<td class="t"></td>
+				</tr>
+			</tr>
+		</table><br><br><br>
+		<table class="c" width="100%" height="20%" border=2>
+			<tr class="d">
+				<td width="40%"><b>LUNCH</b></td>
+				<td><b>QUANTITY</b></td>
+				<td><b>FAT</b></td>
+				<td><b>CARBS</b></td>
+				<td><b>PROTEIN<b></td>
+				<td><b>CALORIES(kcl)</b></td>
+				<tr>
+				<td>1.<input list="my" id="z4" class="z" placeholder="+add food"></td>
+				<datalist id="my">
+				<option value="pancake">
+				<option value="shake">
+				<option value="egg roll">
+				<option value="sandwich">
+				<option value="coke">
+				<option value="poached egg">
+				<option value="pizza">
+				<td><input id="p4" type="number"></td>
+				<td  class="q"></td>
+				<td class="r"></td>
+				<td class="s"></td>
+				<td class="t"></td>
+				</tr>
+				<tr>
+				<td>2.<input list="my" id="z5" class="z" placeholder="+add food"></td>
+				<datalist id="my">
+				<option value="pancake">
+				<option value="shake">
+				<option value="egg roll">
+				<option value="sandwich">
+				<option value="coke">
+				<option value="poached egg">
+				<option value="pizza">
+				<td><input id="p5" type="number"></td>
+				<td  class="q"></td>
+				<td class="r"></td>
+				<td class="s"></td>
+				<td class="t"></td>
+				</tr>
+				<tr>
+				<td>3.<input list="my" id="z6" class="z" placeholder="+add food"></td>
+				<datalist id="my">
+				<option value="pancake">
+				<option value="shake">
+				<option value="egg roll">
+				<option value="sandwich">
+				<option value="coke">
+				<option value="poached egg">
+				<option value="pizza">
+				
+				<td><input id="p6" type="number"></td>
+				<td  class="q"></td>
+				<td class="r"></td>
+				<td class="s"></td>
+				<td class="t"></td>
+				</tr>
+			</tr>
+		</table><br><br><br>
+		<table class="c" width="100%" height="20%" border=2>
+			<tr class="d">
+				<td width="40%"><b>DINNER</b></td>
+				<td><b>QUANTITY</b></td>
+				<td><b>FAT</b></td>
+				<td><b>CARBS</b></td>
+				<td><b>PROTEIN<b></td>
+				<td><b>CALORIES(kcl)</b></td>
+				<tr>
+				<td>1.<input list="my" id="z7" class="z" placeholder="+add food"></td>
+				<datalist id="my">
+				<option value="pancake">
+				<option value="shake">
+				<option value="egg roll">
+				<option value="sandwich">
+				<option value="coke">
+				<option value="poached egg">
+				<option value="pizza">
+				
+				<td><input id="p7" type="number"></td>
+				<td  class="q"></td>
+				<td class="r"></td>
+				<td class="s"></td>
+				<td class="t"></td>
+				</tr>
+				<tr>
+				<td>2.<input list="my" id="z8" class="z" placeholder="+add food"></td>
+				<datalist id="my">
+				<option value="pancake">
+				<option value="shake">
+				<option value="egg roll">
+				<option value="sandwich">
+				<option value="coke">
+				<option value="poached egg">
+				<option value="pizza">
+				
+				<td><input id="p8" type="number"></td>
+				<td  class="q"></td>
+				<td class="r"></td>
+				<td class="s"></td>
+				<td class="t"></td>
+				</tr>
+				<tr>
+				<td>3.<input list="my" id="z9" class="z" placeholder="+add food"></td>
+				<datalist id="my">
+				<option value="pancake">
+				<option value="shake">
+				<option value="egg roll">
+				<option value="sandwich">
+				<option value="coke">
+				<option value="poached egg">
+				<option value="pizza">
+				
+				<td><input id="p9" type="number"></td>
+				<td  class="q"></td>
+				<td class="r"></td>
+				<td class="s"></td>
+				<td class="t"></td>
+				</tr>
+			</tr>
+		</table><br><br><br>
+		<button onclick="raj1();"><b>finish</b></button><br>
+		<pre><h2 class="o"><b>TOTAL CALORIES==<b id="delta"></b></b></h2></pre>
+	</div>
+</body>
+</html>
